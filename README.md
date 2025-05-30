@@ -20,6 +20,7 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 - **Shift + O**: Open selected story in new tab
 - **m**: Go to next page (follows "More" link)
 - **Shift + S**: Save current story for later
+- **Escape**: Temporarily clear highlight (resume with any navigation key)
 - **Command/Ctrl + K**: Open saved entries modal
 
 #### Modal Navigation

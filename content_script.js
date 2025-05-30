@@ -14,6 +14,7 @@ class HackerNewsNavigator {
     this.deleteConfirmation = null;
     this.pendingDeleteUrl = null;
     this.currentUrl = window.location.href;
+    this.temporaryHighlight = null;
     
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {
@@ -217,6 +218,9 @@ class HackerNewsNavigator {
   }
   
   selectEntry(index) {
+    // Clear any temporary highlight state when navigation resumes
+    this.temporaryHighlight = null;
+    
     // Remove previous selection
     const prevSelected = document.querySelector('.hn-selected-entry');
     if (prevSelected) {
@@ -400,6 +404,11 @@ class HackerNewsNavigator {
         case 'm':
           event.preventDefault();
           this.goToNextPage();
+          break;
+          
+        case 'Escape':
+          event.preventDefault();
+          this.clearTemporaryHighlight();
           break;
       }
     });
@@ -820,6 +829,7 @@ class HackerNewsNavigator {
             <span><kbd>Shift</kbd>+<kbd>S</kbd></span><span>Save story</span>
             <span><kbd>m</kbd></span><span>Next page</span>
             <span><kbd>⌘</kbd>+<kbd>K</kbd></span><span>Open this modal</span>
+            <span><kbd>Esc</kbd></span><span>Temporarily clear highlight</span>
           </div>
         </div>
       </div>
@@ -1053,6 +1063,21 @@ class HackerNewsNavigator {
     const moreLink = document.querySelector('a.morelink');
     if (moreLink) {
       moreLink.click();
+    }
+  }
+  
+  clearTemporaryHighlight() {
+    const prevSelected = document.querySelector('.hn-selected-entry');
+    if (prevSelected) {
+      prevSelected.classList.remove('hn-selected-entry');
+      this.temporaryHighlight = prevSelected;
+    }
+  }
+  
+  restoreTemporaryHighlight() {
+    if (this.temporaryHighlight) {
+      this.temporaryHighlight.classList.add('hn-selected-entry');
+      this.temporaryHighlight = null;
     }
   }
 }
