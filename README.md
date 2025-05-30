@@ -16,8 +16,9 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 - **↑/↓ Arrow Keys** or **j/k**: Navigate between story entries
 - **Enter**: Open selected story in current tab
 - **Shift + Enter**: Open selected story in new tab
-- **o**: Open comments in current tab
-- **Shift + O**: Open comments in new tab
+- **o**: Open selected story in current tab
+- **Shift + O**: Open selected story in new tab
+- **m**: Go to next page (follows "More" link)
 - **Shift + S**: Save current story for later
 - **Command/Ctrl + K**: Open saved entries modal
 
@@ -72,8 +73,9 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 | `↑`/`↓` or `j`/`k` | Navigate stories |
 | `Enter` | Open story in current tab |
 | `Shift + Enter` | Open story in new tab |
-| `o` | Open comments in current tab |
-| `Shift + O` | Open comments in new tab |
+| `o` | Open selected story in current tab |
+| `Shift + O` | Open selected story in new tab |
+| `m` | Go to next page (follows "More" link) |
 | `Shift + S` | Save story for later |
 | `⌘/Ctrl + K` | Open saved entries modal |
 
