@@ -381,10 +381,10 @@ class HackerNewsNavigator {
         case 'o':
           if (event.shiftKey) {
             event.preventDefault();
-            this.openCommentsInNewTab();
+            this.openInNewTab();
           } else {
             event.preventDefault();
-            this.openCommentsInCurrentTab();
+            this.openInCurrentTab();
           }
           break;
           
@@ -408,7 +408,7 @@ class HackerNewsNavigator {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -417,24 +417,24 @@ class HackerNewsNavigator {
       }
       
       .hn-modal-content {
-        background: #1a1a1a;
+        background: #ffffff;
         border-radius: 12px;
         width: 90%;
         max-width: 600px;
         max-height: 80vh;
-        border: 1px solid #333;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        border: 1px solid #e1e5e9;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         overflow: hidden;
       }
       
       .hn-modal-header {
         padding: 20px 24px 16px;
-        border-bottom: 1px solid #333;
-        background: #222;
+        border-bottom: 1px solid #e1e5e9;
+        background: #f8f9fa;
       }
       
       .hn-modal-title {
-        color: #fff;
+        color: #1a1a1a;
         font-size: 18px;
         font-weight: 600;
         margin: 0;
@@ -442,7 +442,7 @@ class HackerNewsNavigator {
       }
       
       .hn-modal-subtitle {
-        color: #888;
+        color: #6c757d;
         font-size: 14px;
         margin: 4px 0 0 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -456,18 +456,18 @@ class HackerNewsNavigator {
       
       .hn-entry-item {
         padding: 16px 24px;
-        border-bottom: 1px solid #2a2a2a;
+        border-bottom: 1px solid #f1f3f4;
         cursor: pointer;
         transition: all 0.2s ease;
-        background: #1a1a1a;
+        background: #ffffff;
       }
       
       .hn-entry-item:hover {
-        background: #252525;
+        background: #f8f9fa;
       }
       
       .hn-entry-item.selected {
-        background: #0066cc;
+        background: #007aff;
         color: white;
       }
       
@@ -476,7 +476,7 @@ class HackerNewsNavigator {
       }
       
       .hn-entry-title {
-        color: #fff;
+        color: #1a1a1a;
         font-size: 16px;
         font-weight: 500;
         margin: 0 0 8px 0;
@@ -485,7 +485,7 @@ class HackerNewsNavigator {
       }
       
       .hn-entry-url {
-        color: #888;
+        color: #6c757d;
         font-size: 13px;
         margin: 0;
         font-family: monospace;
@@ -494,8 +494,8 @@ class HackerNewsNavigator {
       
       .hn-modal-footer {
         padding: 16px 24px;
-        background: #222;
-        border-top: 1px solid #333;
+        background: #f8f9fa;
+        border-top: 1px solid #e1e5e9;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -514,7 +514,7 @@ class HackerNewsNavigator {
       }
       
       .hn-shortcuts-section h4 {
-        color: #fff;
+        color: #1a1a1a;
         font-size: 14px;
         font-weight: 600;
         margin: 0 0 12px 0;
@@ -535,24 +535,25 @@ class HackerNewsNavigator {
       }
       
       .hn-shortcuts-grid span:nth-child(even) {
-        color: #aaa;
+        color: #495057;
         font-size: 13px;
         text-align: left;
       }
       
       .hn-keyboard-hint {
-        color: #666;
+        color: #6c757d;
         font-size: 12px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       
       .hn-keyboard-hint kbd {
-        background: #333;
-        color: #fff;
+        background: #e9ecef;
+        color: #495057;
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 11px;
         margin: 0 2px;
+        border: 1px solid #ced4da;
       }
       
       .hn-delete-confirmation {
@@ -561,7 +562,7 @@ class HackerNewsNavigator {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.4);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -569,30 +570,31 @@ class HackerNewsNavigator {
       }
       
       .hn-delete-confirmation-content {
-        background: #1a1a1a;
+        background: #ffffff;
         border-radius: 12px;
         padding: 24px;
         max-width: 400px;
-        border: 1px solid #333;
+        border: 1px solid #e1e5e9;
         text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
       
       .hn-delete-confirmation-content h3 {
-        color: #ff4444;
+        color: #dc3545;
         margin: 0 0 12px 0;
         font-size: 18px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       
       .hn-delete-confirmation-content p {
-        color: #ccc;
+        color: #495057;
         margin: 0 0 20px 0;
         font-size: 14px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       
       .hn-confirmation-buttons span {
-        color: #888;
+        color: #6c757d;
         font-size: 13px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
@@ -600,13 +602,13 @@ class HackerNewsNavigator {
       .hn-empty-state {
         text-align: center;
         padding: 60px 24px;
-        color: #666;
+        color: #6c757d;
       }
       
       .hn-empty-state h3 {
         margin: 0 0 8px 0;
         font-size: 16px;
-        color: #888;
+        color: #495057;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       
@@ -808,7 +810,7 @@ class HackerNewsNavigator {
           <div class="hn-shortcuts-grid">
             <span><kbd>↑</kbd><kbd>↓</kbd> or <kbd>j</kbd><kbd>k</kbd></span><span>Navigate stories</span>
             <span><kbd>Enter</kbd> / <kbd>Shift</kbd>+<kbd>Enter</kbd></span><span>Open story</span>
-            <span><kbd>o</kbd> / <kbd>Shift</kbd>+<kbd>O</kbd></span><span>Open comments</span>
+            <span><kbd>o</kbd> / <kbd>Shift</kbd>+<kbd>O</kbd></span><span>Open story</span>
             <span><kbd>Shift</kbd>+<kbd>S</kbd></span><span>Save story</span>
             <span><kbd>⌘</kbd>+<kbd>K</kbd></span><span>Open this modal</span>
           </div>

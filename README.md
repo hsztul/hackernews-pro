@@ -1,6 +1,6 @@
-# HackerNews Keyboard Navigator (hnav)
+# HackerNews Navigator (hnav)
 
-A Chrome extension that provides intuitive keyboard navigation and "save for later" functionality for HackerNews, with a minimal and cool aesthetic inspired by Raycast/Arc.
+A Chrome extension that provides intuitive keyboard navigation and "save for later" functionality for HackerNews
 
 ## Features
 
@@ -39,7 +39,6 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 - Minimal, clean aesthetic inspired by Raycast and Arc
 - Subtle selection outlines that don't interfere with HN's design
 - Smooth animations and transitions
-- Dark theme modal interface with backdrop blur
 - Professional typography and spacing
 - Keyboard shortcuts guide integrated into modal
 
