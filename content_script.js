@@ -395,6 +395,12 @@ class HackerNewsNavigator {
             this.saveCurrentEntry();
           }
           break;
+          
+        case 'M':
+        case 'm':
+          event.preventDefault();
+          this.goToNextPage();
+          break;
       }
     });
   }
@@ -812,6 +818,7 @@ class HackerNewsNavigator {
             <span><kbd>Enter</kbd> / <kbd>Shift</kbd>+<kbd>Enter</kbd></span><span>Open story</span>
             <span><kbd>o</kbd> / <kbd>Shift</kbd>+<kbd>O</kbd></span><span>Open story</span>
             <span><kbd>Shift</kbd>+<kbd>S</kbd></span><span>Save story</span>
+            <span><kbd>m</kbd></span><span>Next page</span>
             <span><kbd>⌘</kbd>+<kbd>K</kbd></span><span>Open this modal</span>
           </div>
         </div>
@@ -1039,6 +1046,13 @@ class HackerNewsNavigator {
     const data = this.getEntryData(entry);
     if (data.hnLink) {
       window.open(data.hnLink, '_blank');
+    }
+  }
+  
+  goToNextPage() {
+    const moreLink = document.querySelector('a.morelink');
+    if (moreLink) {
+      moreLink.click();
     }
   }
 }
