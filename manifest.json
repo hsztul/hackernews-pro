@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "HackerNews Keyboard Navigator",
+  "version": "1.0",
+  "description": "Navigate HackerNews with keyboard shortcuts and save stories for later",
+  
+  "permissions": [
+    "storage"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://news.ycombinator.com/*"
+      ],
+      "js": ["content_script.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  }
+}

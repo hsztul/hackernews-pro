@@ -1,0 +1,46 @@
+/* HackerNews Navigation Extension Styles */
+
+.hn-selected-entry {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+  border-radius: 4px;
+  background-color: rgba(0, 122, 255, 0.05);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.hn-selected-entry.hn-saved-feedback {
+  outline-color: #34c759;
+  background-color: rgba(52, 199, 89, 0.1);
+}
+
+.hn-saved-text {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  background: #34c759;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 1000;
+  animation: hn-fade-in-out 2s ease-in-out;
+}
+
+@keyframes hn-fade-in-out {
+  0% { opacity: 0; transform: translateY(-4px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
+/* Ensure the outline doesn't interfere with HN's existing styles */
+.hn-selected-entry td {
+  position: relative;
+}
+
+/* Smooth scrolling when navigating */
+html {
+  scroll-behavior: smooth;
+}
