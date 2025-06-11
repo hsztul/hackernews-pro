@@ -1,4 +1,4 @@
-# HackerNews Navigator (hnav)
+# HackerNews Pro (hpro)
 
 A Chrome extension that provides intuitive keyboard navigation and "save for later" functionality for HackerNews
 
