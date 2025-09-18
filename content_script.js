@@ -374,7 +374,7 @@ class HackerNewsNavigator {
         case 'Enter':
           if (event.shiftKey) {
             event.preventDefault();
-            this.openInNewTab();
+            this.openCommentsInNewTab();
           } else {
             event.preventDefault();
             this.openInCurrentTab();
@@ -824,7 +824,8 @@ class HackerNewsNavigator {
           <h4>Main Navigation</h4>
           <div class="hn-shortcuts-grid">
             <span><kbd>↑</kbd><kbd>↓</kbd> or <kbd>j</kbd><kbd>k</kbd></span><span>Navigate stories</span>
-            <span><kbd>Enter</kbd> / <kbd>Shift</kbd>+<kbd>Enter</kbd></span><span>Open story</span>
+            <span><kbd>Enter</kbd></span><span>Open story</span>
+            <span><kbd>Shift</kbd>+<kbd>Enter</kbd></span><span>Open comments</span>
             <span><kbd>o</kbd> / <kbd>Shift</kbd>+<kbd>O</kbd></span><span>Open story</span>
             <span><kbd>Shift</kbd>+<kbd>S</kbd></span><span>Save story</span>
             <span><kbd>m</kbd></span><span>Next page</span>
@@ -1054,7 +1055,7 @@ class HackerNewsNavigator {
   openCommentsInNewTab() {
     const entry = this.getCurrentEntry();
     const data = this.getEntryData(entry);
-    if (data.hnLink) {
+    if (data && data.hnLink) {
       window.open(data.hnLink, '_blank');
     }
   }

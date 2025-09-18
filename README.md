@@ -15,7 +15,7 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 #### Story Navigation
 - **↑/↓ Arrow Keys** or **j/k**: Navigate between story entries
 - **Enter**: Open selected story in current tab
-- **Shift + Enter**: Open selected story in new tab
+- **Shift + Enter**: Open selected story's comments in a new tab
 - **o**: Open selected story in current tab
 - **Shift + O**: Open selected story in new tab
 - **m**: Go to next page (follows "More" link)
@@ -62,10 +62,11 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 ### Usage
 1. Navigate to any supported HackerNews page
 2. Use **j/k** or arrow keys to navigate between stories
-3. Use **Enter** or **Shift+Enter** to open stories
-4. Use **o** or **Shift+O** to open comments
-5. Use **Shift+S** to save stories for later
-6. Press **Command/Ctrl + K** to view and manage your saved stories
+3. Use **Enter** to open stories in the current tab
+4. Use **Shift+Enter** to open the comments page in a new tab
+5. Use **o** or **Shift+O** to open stories (current tab / new tab)
+6. Use **Shift+S** to save stories for later
+7. Press **Command/Ctrl + K** to view and manage your saved stories
 
 ## Keyboard Shortcuts Summary
 
@@ -73,7 +74,7 @@ A Chrome extension that provides intuitive keyboard navigation and "save for lat
 |----------|--------|
 | `↑`/`↓` or `j`/`k` | Navigate stories |
 | `Enter` | Open story in current tab |
-| `Shift + Enter` | Open story in new tab |
+| `Shift + Enter` | Open comments in new tab |
 | `o` | Open selected story in current tab |
 | `Shift + O` | Open selected story in new tab |
 | `m` | Go to next page (follows "More" link) |
