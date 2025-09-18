@@ -14,8 +14,8 @@
 - **Arrow Key Navigation:** Up/down arrows navigate between story entries
 - **Entry Actions:**
   - `Enter`: Opens selected entry in current tab
-  - `Shift+Enter`: Opens entry in new tab
-  - `Shift+O`: Opens comments in new tab
+  - `Shift+Enter`: Opens comments in new tab
+  - `Shift+O`: Opens entry in new tab
   - `Shift+S`: Saves current selected entry
 - **Saved Entries Modal:** 
   - `Command+K`: Opens modal with saved entries
@@ -81,12 +81,12 @@
 - [x] When `Enter` is pressed: Get the URL of the currently selected main story link
 - [x] Navigate the current tab to this URL using `window.location.href = url`
 
-#### 2. Open Entry in New Tab (`Shift+Enter`)
-- [x] When `Shift+Enter` is pressed: Get the URL of the currently selected main story link
+#### 2. Open Entry in New Tab (`Shift+O`)
+- [x] When `Shift+O` is pressed: Get the URL of the currently selected main story link
 - [x] Open a new tab with this URL using `window.open(url, '_blank')`
 
-#### 3. Open Comments (`Shift+O`)
-- [x] When `Shift+O` is pressed: Get the URL of the comments section for the currently selected story
+#### 3. Open Comments (`Shift+Enter`)
+- [x] When `Shift+Enter` is pressed: Get the URL of the comments section for the currently selected story
 - [x] Parse the HN entry to find the comments link
 - [x] Open a new tab with the comments URL
 
@@ -234,8 +234,8 @@ hn-nav-extension/
 ### Core Navigation
 - [x] Arrow key navigation correctly highlights entries on new/past pages
 - [x] `Enter` opens selected entry in current tab
-- [x] `Shift+Enter` opens selected entry in new tab
-- [x] `Shift+O` opens comments in new tab
+- [x] `Shift+Enter` opens comments in new tab
+- [x] `Shift+O` opens selected entry in new tab
 - [x] Navigation wraps around correctly at list boundaries
 
 ### Saving Functionality
