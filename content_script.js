@@ -1056,7 +1056,7 @@ class HackerNewsNavigator {
     const entry = this.getCurrentEntry();
     const data = this.getEntryData(entry);
     if (data && data.hnLink) {
-      window.open(data.hnLink, '_blank');
+      window.open(data.hnLink);
     }
   }
   
